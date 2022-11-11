@@ -12,7 +12,7 @@
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
+// See the License for the specific language governing permssions and
 // limitations under the License.
 
 //! # Nicks Pallet
@@ -69,7 +69,6 @@ pub mod pallet {
 
 		/// What to do with slashed funds.
 		type Slashed: OnUnbalanced<NegativeImbalanceOf<Self>>;
-
 
 		/// The origin which may forcibly set or remove a name. Root can always do this.
 		type ForceOrigin: EnsureOrigin<Self::RuntimeOrigin>;
@@ -243,7 +242,6 @@ pub mod pallet {
 
 #[cfg(test)]
 mod tests {
-	use std::alloc::System;
 	use super::*;
 	use crate as pallet_nicks;
 
@@ -251,7 +249,6 @@ mod tests {
 		assert_noop, assert_ok, ord_parameter_types, parameter_types,
 		traits::{ConstU32, ConstU64},
 	};
-	use frame_support::traits::PalletInfo;
 	use frame_system::EnsureSignedBy;
 	use sp_core::H256;
 	use sp_runtime::{
